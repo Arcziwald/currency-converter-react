@@ -5,14 +5,11 @@ import Fieldset from "./Fieldset";
 
 function App() {
  
- const onFormSubmit = (event) => {
-event.preventDefault();
- };
- 
+  
   return (
-    <Container onFormSubmit={onFormSubmit}>
+    <Container>
       <div className="element">
-      <Form onFormSubmit={onFormSubmit}>
+      <Form>
             <Fieldset>
                 <Header title="Przelicznik walut" />
                    <p>
