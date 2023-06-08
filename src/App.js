@@ -1,7 +1,7 @@
-import { useState } from "react";
 import Form from "./Form";
 import Header from "./Header";
 import Container from "./Container";
+import Fieldset from "./Fieldset";
 
 function App() {
  
@@ -13,7 +13,7 @@ event.preventDefault();
     <Container onFormSubmit={onFormSubmit}>
       <div className="element">
       <Form onFormSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
+            <Fieldset>
                 <Header title="Przelicznik walut" />
                    <p>
                     <label>
@@ -36,7 +36,7 @@ event.preventDefault();
                   <button className="form__button">Przelicz</button>
                   <p><strong><span></span><span></span></strong></p>
                   <p><a className="form__link" href="https://www.google.pl/search?q=aktualne+kursy+walut&sxsrf=APwXEdchfR1U-81E-QWLdOA1oBqnYxmybw%3A1679774877006&source=hp&ei=nFQfZPKoOqWMlQeDroiQCQ&iflsig=AOEireoAAAAAZB9irQoocohV3Sp8_2uLaCfqQdj4vz21&oq=aktualne+kursy+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQMyCAgAEIoFEJIDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToLCC4QgAQQxwEQrwE6DgguEIoFELEDEIMBENQCOggIABCABBCxAzoLCAAQigUQsQMQgwE6DggAEIAEELEDEIMBEMkDOgoIABCKBRDJAxBDOgsIABCABBCxAxDJAzoICAAQgAQQkgNQAFjqFmCAJWgAcAB4AIABggGIAYwKkgEEMTMuMpgBAKABAQ&sclient=gws-wiz">Sprawdź aktualny kurs </a></p>
-            </fieldset>
+            </Fieldset>
         </Form>
       </div>
     </Container>   
