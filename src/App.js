@@ -2,6 +2,7 @@ import Form from "./Form";
 import Header from "./Header";
 import Container from "./Container";
 import Fieldset from "./Fieldset";
+import Label from "./Label";
 
 function App() {
  return (
@@ -11,15 +12,14 @@ function App() {
             <Fieldset>
                 <Header title="Przelicznik walut" />
                    <p>
-                    <label>
-                      <span className="form__labelText"> Waluta </span>
+                    <Label text="Waluta">
                       <select className="form__field" name="currency">
                         <option>EUR</option>
                         <option>CHF</option>
                         <option>GBP</option>
                         <option>USD</option>
                     </select>
-                    </label>
+                    </Label>
                   </p>
                   <p>
                     <label>

@@ -1,9 +1,3 @@
-.form__labelText {
-    width: 200px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
   .form__field {
     border: 1px solid #ccc;
     padding: 10px;
