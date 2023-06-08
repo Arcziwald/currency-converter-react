@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "./Form";
 import Header from "./Header";
+import Container from "./Container";
 
 function App() {
  
@@ -9,7 +10,7 @@ event.preventDefault();
  };
  
   return (
-    <div className="container">
+    <Container onFormSubmit={onFormSubmit}>
       <div className="element">
       <Form onFormSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
@@ -37,9 +38,8 @@ event.preventDefault();
                   <p><a className="form__link" href="https://www.google.pl/search?q=aktualne+kursy+walut&sxsrf=APwXEdchfR1U-81E-QWLdOA1oBqnYxmybw%3A1679774877006&source=hp&ei=nFQfZPKoOqWMlQeDroiQCQ&iflsig=AOEireoAAAAAZB9irQoocohV3Sp8_2uLaCfqQdj4vz21&oq=aktualne+kursy+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQMyCAgAEIoFEJIDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToLCC4QgAQQxwEQrwE6DgguEIoFELEDEIMBENQCOggIABCABBCxAzoLCAAQigUQsQMQgwE6DggAEIAEELEDEIMBEMkDOgoIABCKBRDJAxBDOgsIABCABBCxAxDJAzoICAAQgAQQkgNQAFjqFmCAJWgAcAB4AIABggGIAYwKkgEEMTMuMpgBAKABAQ&sclient=gws-wiz">Sprawdź aktualny kurs </a></p>
             </fieldset>
         </Form>
-              
-    </div>
-            </div>   
+      </div>
+    </Container>   
   );  
 };
 
