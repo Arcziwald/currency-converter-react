@@ -4,9 +4,7 @@ import Container from "./Container";
 import Fieldset from "./Fieldset";
 
 function App() {
- 
-  
-  return (
+ return (
     <Container>
       <div className="element">
       <Form>

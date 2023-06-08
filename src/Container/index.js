@@ -1,7 +1,9 @@
+import "./style.css";
+
 const Container = ({ children, onFormSubmit }) => {
-    <form className="container" onSubmit={onFormSubmit}>
+    <container className="container" onSubmit={onFormSubmit}>
         {children}
-    </form>
+    </container>
 };
 
     
