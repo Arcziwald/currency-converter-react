@@ -1,0 +1,10 @@
+.form__field {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .form__field:read-only {
+    background-color: #eee;
+  }
