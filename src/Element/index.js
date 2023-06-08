@@ -1,10 +1,11 @@
 import "./style.css";
 
-const Element = ({ children }) => {
-    <element className="element">
+const Element = ({children}) => {
+  return(
+     <div className="element">
         {children}
-    </element>
+    </div>
+  );
 };
 
-    
 export default Element;

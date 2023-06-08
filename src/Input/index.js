@@ -1,6 +1,7 @@
 import "./style.css";
 
-const Input = () => (
+const Input = () => {
+    return (
     <input  
     type="number" 
     className="form__field" 
@@ -11,5 +12,5 @@ const Input = () => (
     placeholder="Wpisz kwotę w zł" 
     />
 );
-
+    };
 export default Input;

@@ -1,10 +1,11 @@
 import "./style.css";
 
-const Form = ({ children, onFormSubmit }) => {
-    <form className="form" onSubmit={onFormSubmit}>
+const Form = ({children}) => {
+  return (
+    <form className="form">
         {children}
     </form>
+  );
 };
-
     
 export default Form;
