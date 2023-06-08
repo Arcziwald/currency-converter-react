@@ -5,6 +5,7 @@ import Fieldset from "./Fieldset";
 import Label from "./Label";
 import Input from "./Input";
 import Select from "./Select";
+import Element from "./Element";
 import Button from "./Button";
 
 function App() {

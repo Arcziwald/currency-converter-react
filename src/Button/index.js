@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Button = () => (
+const Button = ({text}) => (
     <>
     <button className="form__button">
-    {text}
+        {text}
     </button>
     </>            
 );
