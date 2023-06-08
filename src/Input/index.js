@@ -8,6 +8,7 @@ const Input = () => (
     step="0.01" a
     utofocus
     required
+    placeholder="Wpisz kwotę w zł" 
     />
 );
 

@@ -23,8 +23,7 @@ function App() {
                   </>
                   <>
                     <Label text="Kwota">
-                      <input type="number" className="form__field" min="0.01" step="0.01" autofocus 
-                      placeholder="Wpisz kwotę w zł" />
+                    <Input />
                     </Label>
                   </>
                   <button className="form__button">Przelicz</button>
