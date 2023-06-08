@@ -1,0 +1,8 @@
+.element {
+    width: 412px;
+    height: 350px;
+    resize:both;
+    overflow: auto;
+    border-radius: 30px;
+    background-color:rgb(184 184 176 / 67%);
+}
