@@ -8,7 +8,7 @@ const Input = () => {
     className="form__field" 
     min="0.01" 
     step="0.01"
-    autofocus
+    autoFocus
     required
     placeholder="Wpisz kwotę w zł" 
     />
