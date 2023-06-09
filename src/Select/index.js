@@ -1,6 +1,7 @@
 import "./style.css";
 
-const Select = () => (
+const Select = () => {
+    return (
     <p>
         <select 
             className="form__field">
@@ -11,5 +12,6 @@ const Select = () => (
         </select>
     </p>
 );
+    };
 
 export default Select;
