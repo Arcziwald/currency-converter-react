@@ -1,10 +1,13 @@
 import "./style.css";
 
-const Select = () => {
+const Select = ({ selectedCurrency, onSelectChange }) => {
     return (
     <p>
         <select 
-            className="form__field">
+            className="form__field"
+            defaultValue={selectedCurrency}
+            onChange={onSelectChange}
+        >
                 <option>EUR</option>
                 <option>CHF</option>
                 <option>GBP</option>
