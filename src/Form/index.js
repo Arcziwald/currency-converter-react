@@ -1,4 +1,4 @@
-import "./style.css";
+import "./form.css";
 
 const Form = ({children}) => {
   return (

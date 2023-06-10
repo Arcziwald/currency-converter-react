@@ -1,10 +1,10 @@
-import "./style.css";
+import "./container.css";
 
 const Container = ({children}) => {
     return (
-        <container className="container">
+        <div className="container">
             {children}
-        </container>
+        </div>
         );
     };
     

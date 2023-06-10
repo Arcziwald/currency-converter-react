@@ -1,4 +1,4 @@
-import "./style.css";
+import "./element.css";
 
 const Element = ({children}) => {
   return(
