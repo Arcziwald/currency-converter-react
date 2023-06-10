@@ -1,4 +1,4 @@
-import "./style.css";
+import "./label.css";
 
 const Label = ({ text, children }) => {
 return (
