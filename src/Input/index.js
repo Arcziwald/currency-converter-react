@@ -10,7 +10,6 @@ const Input = () => {
       autoFocus
       required
       placeholder="Wpisz kwotę w zł"
-      
     />
   );
 };
