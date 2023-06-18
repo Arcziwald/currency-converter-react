@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Input = () => {
+const Input = (amount, setAmount) => {
   return (
     <input
       type="number"
@@ -10,6 +10,8 @@ const Input = () => {
       autoFocus
       required
       placeholder="Wpisz kwotę w zł"
+      value={amount}
+      onChange= {(event) => setAmount(event.target.value)}
     />
   );
 };
