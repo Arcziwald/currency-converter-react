@@ -46,7 +46,7 @@ function App() {
     event.preventDefault();
     const rate = calculateRate(amount, currency);
     setResultText(rate.toFixed(2));
-
+    
   };
 
   return (

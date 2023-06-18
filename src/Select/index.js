@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Select = ({ currency, setCurrency }) => {
+const Select = () => {
     return (
     <p>
         <select 

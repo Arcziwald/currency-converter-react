@@ -1,4 +1,4 @@
-const Result = ({resultText}) => {
+const Result = ({ resultText }) => {
   return (
     <div>
       <h3>Wynik:</h3>
