@@ -28,11 +28,11 @@ const CurrencyOptions = () => {
   );
 };
 function App() {
-  const [amount] = useState(0);
-  const [currency] = useState('EUR');
-  const [result] = useState('');
+  const [amount, setAmount] = useState(0);
+  const [currency, setCurrency] = useState('EUR');
+  const [resultText, setResultText] = useState('');
  
-  const calculateRate = () => {
+  const calculateRate = (amount, currency) => {
     const currencies = {
       EUR: 4.55, 
       CHF: 4.71,
@@ -42,6 +42,12 @@ function App() {
     return amount / currencies[currency];
   };
 
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    const rate = calculateRate(amount, currency);
+    setResultText(rate.toFixed(2));
+
+  };
 
   return (
     <>
@@ -52,19 +58,25 @@ function App() {
                 <Header title="Przelicznik walut" />
                   <>
                     <Label text="Waluta">
-                      <Select />
+                      <Select 
+                      CurrencyOptions={CurrencyOptions} 
+                      value={currency}
+                      onChange={(event) => setCurrency(event.target.value)}
+                      />
                     </Label>
                   </>
                   <>
                     <Label text="Kwota">
-                    <Input />
+                    <Input 
+                    value={amount}
+                    onChange= {(event) => setAmount(+event.target.value)}/>
                     </Label>
                   </>
                   <Button 
                   text="Przelicz"
                   type="submit"
                   />
-                  <Result result={result} />
+                  <Result resultText={resultText} />
                   <p><a className="form__link" href="https://www.google.pl/search?q=aktualne+kursy+walut&sxsrf=APwXEdchfR1U-81E-QWLdOA1oBqnYxmybw%3A1679774877006&source=hp&ei=nFQfZPKoOqWMlQeDroiQCQ&iflsig=AOEireoAAAAAZB9irQoocohV3Sp8_2uLaCfqQdj4vz21&oq=aktualne+kursy+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQMyCAgAEIoFEJIDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToLCC4QgAQQxwEQrwE6DgguEIoFELEDEIMBENQCOggIABCABBCxAzoLCAAQigUQsQMQgwE6DggAEIAEELEDEIMBEMkDOgoIABCKBRDJAxBDOgsIABCABBCxAxDJAzoICAAQgAQQkgNQAFjqFmCAJWgAcAB4AIABggGIAYwKkgEEMTMuMpgBAKABAQ&sclient=gws-wiz">Sprawdź aktualny kurs </a></p>
             </Fieldset>
         </Form>
