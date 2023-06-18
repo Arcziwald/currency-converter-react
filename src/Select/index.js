@@ -1,12 +1,12 @@
 import "./style.css";
 
-const Select = ({ selectedCurrency, onSelectChange }) => {
+const Select = ({ currency, setCurrency }) => {
     return (
     <p>
         <select 
             className="form__field"
-            defaultValue={selectedCurrency}
-            onChange={onSelectChange}
+            value={currency}
+            onChange={(event) => setCurrency(event.target.value)}
         >
                 <option>EUR</option>
                 <option>CHF</option>
