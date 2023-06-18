@@ -5,8 +5,6 @@ const Select = ({ currency, setCurrency }) => {
     <p>
         <select 
             className="form__field"
-            value={currency}
-            onChange={(event) => setCurrency(event.target.value)}
         >
                 <option>EUR</option>
                 <option>CHF</option>

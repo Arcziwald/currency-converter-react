@@ -10,8 +10,7 @@ const Input = (amount, setAmount) => {
       autoFocus
       required
       placeholder="Wpisz kwotę w zł"
-      value={amount}
-      onChange= {(event) => setAmount(event.target.value)}
+      
     />
   );
 };
