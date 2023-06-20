@@ -1,7 +1,7 @@
 const Result = ({ resultText }) => (
  
     <div>
-      Result:
+      <h3>Result:</h3>
     {resultText.setResultText !== undefined && (
       <>
         {resultText.setAmount.toFixed(2)} {resultText.inputCurrency} = {" "}
