@@ -5,7 +5,7 @@ const Result = ({ result }) => (
       <>
         {result.amount.toFixed(2)} {result.inputCurrency} = {" "}
         <strong>
-        {result.result.toFixed(2)} {result.outputCurrency}
+        {result.rate.toFixed(2)} {result.outputCurrency}
         </strong>
       </>
     )}
