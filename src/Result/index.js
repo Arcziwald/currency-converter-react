@@ -1,11 +1,11 @@
-const Result = ({ resultText }) => (
+const Result = ({ result }) => (
   <div>
     <h3>Result:</h3>
-    {resultText.setResultText !== undefined && (
+    {result.setResult !== undefined && (
       <>
-        {resultText.setAmount.toFixed(2)} {resultText.inputCurrency} = {" "}
+        {result.amount.toFixed(2)} {result.inputCurrency} = {" "}
         <strong>
-        {resultText.setResultText.toFixed(2)} {resultText.outputCurrency}
+        {result.result.toFixed(2)} {result.outputCurrency}
         </strong>
       </>
     )}

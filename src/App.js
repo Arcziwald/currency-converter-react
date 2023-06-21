@@ -30,7 +30,7 @@ const CurrencyOptions = () => {
 function App() {
   const [amount, setAmount] = useState(0);
   const [currency, setCurrency] = useState('EUR');
-  const [resultText, setResultText] = useState('');
+  const [result, setResult] = useState('');
  
   const calculateRate = (amount, currency) => {
     const currencies = {
@@ -45,8 +45,7 @@ function App() {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const rate = calculateRate(amount, currency);
-    setResultText(rate.toFixed(2));
-    
+    setResult(rate.toFixed(2));
   };
 
   return (
@@ -78,7 +77,7 @@ function App() {
                   />
               </Fieldset>
       </Form>
-                  <Result resultText={resultText} />
+                  <Result result={result} />
                   <p><a className="form__link" href="https://www.google.pl/search?q=aktualne+kursy+walut&sxsrf=APwXEdchfR1U-81E-QWLdOA1oBqnYxmybw%3A1679774877006&source=hp&ei=nFQfZPKoOqWMlQeDroiQCQ&iflsig=AOEireoAAAAAZB9irQoocohV3Sp8_2uLaCfqQdj4vz21&oq=aktualne+kursy+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQMyCAgAEIoFEJIDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToLCC4QgAQQxwEQrwE6DgguEIoFELEDEIMBENQCOggIABCABBCxAzoLCAAQigUQsQMQgwE6DggAEIAEELEDEIMBEMkDOgoIABCKBRDJAxBDOgsIABCABBCxAxDJAzoICAAQgAQQkgNQAFjqFmCAJWgAcAB4AIABggGIAYwKkgEEMTMuMpgBAKABAQ&sclient=gws-wiz">Sprawdź aktualny kurs </a></p>
       </Element>
     </Container>
