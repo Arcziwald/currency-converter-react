@@ -1,5 +1,5 @@
 # Currency-converter-react 
-This project is the next step in gaining frontend developer skills by moving your second project to React.
+This project is the next step in gaining frontend developer skills by moving your second project to React
 and it was launched with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
