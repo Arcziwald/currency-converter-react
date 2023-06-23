@@ -1,15 +1,15 @@
 const Result = ({ result }) => (
-  <div>
-    <h3>Result:</h3>
-    {result.setResult !== undefined && (
+  
+    result !== undefined && (
       <>
-        {result.amount.toFixed(2)} {result.inputCurrency} &nbsp;PLN&nbsp; = {" "}
+        {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=
+        {" "}
         <strong>
-        {result.rate.toFixed(2)} {result.outputCurrency}
+          {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
         </strong>
       </>
-    )}
-  </div>
+    )
+  
 );
 
 export default Result;
