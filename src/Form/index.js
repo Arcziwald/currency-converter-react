@@ -13,7 +13,7 @@ export const Form = ({ calculateRate, result }) => {
   };
 
     return (
-    <body className="body"> 
+   
     <div className="container">
       <div className="element">
               <form className="form" onSubmit={onSubmit}>
@@ -59,7 +59,7 @@ export const Form = ({ calculateRate, result }) => {
 
     </div>
             </div>   
-    </body>
+    
   );
 };
     
