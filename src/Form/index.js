@@ -1,8 +1,9 @@
 import "./form.css";
 import { useState } from "react";
+import { Result } from "../Result"
 import { currencies } from "./currencies";
 
-export const Form = ({ calculateRate }) => {
+export const Form = ({ calculateRate, result }) => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].code);
   
@@ -51,7 +52,7 @@ export const Form = ({ calculateRate }) => {
                     </label>
                   </p>
                   <button className="form__button">Przelicz</button>
-                  <p><strong><span className="js-amount"></span><span className="js-rate"></span></strong></p>
+                  <p><Result result={result} /></p>
                   <p><a className="form__link" href="https://www.google.pl/search?q=aktualne+kursy+walut&sxsrf=APwXEdchfR1U-81E-QWLdOA1oBqnYxmybw%3A1679774877006&source=hp&ei=nFQfZPKoOqWMlQeDroiQCQ&iflsig=AOEireoAAAAAZB9irQoocohV3Sp8_2uLaCfqQdj4vz21&oq=aktualne+kursy+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQMyCAgAEIoFEJIDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQigUQQzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToLCC4QgAQQxwEQrwE6DgguEIoFELEDEIMBENQCOggIABCABBCxAzoLCAAQigUQsQMQgwE6DggAEIAEELEDEIMBEMkDOgoIABCKBRDJAxBDOgsIABCABBCxAxDJAzoICAAQgAQQkgNQAFjqFmCAJWgAcAB4AIABggGIAYwKkgEEMTMuMpgBAKABAQ&sclient=gws-wiz">Sprawdź aktualny kurs </a></p>
             </fieldset>
         </form>
