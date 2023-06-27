@@ -13,8 +13,7 @@ export const Form = ({ calculateRate, result }) => {
   };
 
   return (
-    <div className="container">
-      <div className="element">
+    
         <form className="form" onSubmit={onSubmit}>
           <fieldset className="form__fieldset">
             <legend className="form__legend">Przelicznik walut</legend>
@@ -65,8 +64,8 @@ export const Form = ({ calculateRate, result }) => {
             </p>
           </fieldset>
         </form>
-      </div>
-    </div>
+   
+   
   );
 };
 
