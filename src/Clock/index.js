@@ -19,6 +19,10 @@ export const Clock = () => {
       setDate(() => new Date());
     }, 1000);
 
-    
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return <div className="clock">Dzisiaj jest: {typeDate(date)}</div>;
 };
