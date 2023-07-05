@@ -3,7 +3,7 @@ This project is the next step in gaining frontend developer skills by moving you
 and it was launched with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-http://localhost:3000/currency-converter-react
+https://arcziwald.github.io/currency-converter-react/
 
 ![presentation list to do](images/currency-converter-react.gif)
 ## Tools&Technologes
