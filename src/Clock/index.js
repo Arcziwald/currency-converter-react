@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./clock.css";
 
-const typeDate = (date) =>
+const formatDate = (date) =>
   date.toLocaleString(undefined, {
     month: "long",
     weekday: "long",
@@ -24,5 +24,5 @@ export const Clock = () => {
     };
   }, []);
 
-  return <div className="clock">Dzisiaj jest: {typeDate(date)}</div>;
+  return <div className="clock">Dzisiaj jest: {formatDate(date)}</div>;
 };
