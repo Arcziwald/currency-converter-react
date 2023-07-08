@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./clock.css";
+import { StyleClock } from "./styled";
 
 const formatDate = (date) =>
   date.toLocaleString(undefined, {
@@ -24,5 +24,5 @@ export const Clock = () => {
     };
   }, []);
 
-  return <div className="clock">Dzisiaj jest: {formatDate(date)}</div>;
+  return <StyleClock>Dzisiaj jest: {formatDate(date)}</StyleClock>;
 };
