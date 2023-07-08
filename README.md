@@ -18,3 +18,6 @@ https://arcziwald.github.io/currency-converter-react/
 - React App
 - WebPack
 - Babel
+- Styled Components
+- Custom Hooks
+- Local Storage
