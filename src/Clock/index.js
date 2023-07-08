@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useCurrentDate } from "../useCurrentDate";
 import { StyleClock } from "./styled";
 
 const formatDate = (date) =>
@@ -12,17 +12,11 @@ const formatDate = (date) =>
   });
 
 export const Clock = () => {
-  const [date, setDate] = useState(new Date());
+  const date = useCurrentDate();
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDate(() => new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  return <StyleClock>Dzisiaj jest: {formatDate(date)}</StyleClock>;
+  return (
+    <StyleClock>
+      Dzisiaj jest: {formatDate(date)}
+    </StyleClock>
+  )
 };
