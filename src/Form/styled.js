@@ -6,7 +6,7 @@ export const StyleForm = styled.form`
   padding: 5px 5px;
   background-size: auto;
   font-family: Lato, sans-serif;
-  height: 445px;
+  height: 405px;
   resize: both;
   overflow: auto;
   border-radius: 30px;
