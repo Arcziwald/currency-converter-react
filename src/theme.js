@@ -7,6 +7,8 @@ export const theme = {
     greyNickel: "#b8b8b0",
     persionGreen: "#009999",
     bondiBlue: "#00B3B3",
+    gallery: "#eeeeee",
+    teal: "#008080",
   },
   breakpoint: {
     mobileMax: 768,
