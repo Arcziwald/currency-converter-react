@@ -8,7 +8,6 @@ import {
   FieldInput,
 } from "./styled";
 
-import "../index.css";
 import { useState } from "react";
 import { Result } from "../Result";
 import { currencies } from "./currencies";
