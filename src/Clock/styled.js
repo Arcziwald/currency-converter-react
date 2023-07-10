@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleClock = styled.div`
+export const StyledClock = styled.div`
   text-align: right;
   font-family: "Courier New";
   font-size: 13px;
