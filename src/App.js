@@ -1,5 +1,4 @@
 import Form from "./Form";
-import "./index.css";
 
 function App({ result, calculateRate }) {
   return (
