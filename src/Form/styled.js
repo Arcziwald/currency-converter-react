@@ -10,11 +10,11 @@ export const StyleForm = styled.form`
   resize: both;
   overflow: auto;
   border-radius: 30px;
-  background-color: rgb(184 184 176 / 67%);
+  background-color: ${({ theme }) => theme.color.greyNickel};
 `;
 
 export const Fieldset = styled.fieldset`
-  border: 1px solid #ccc;
+  border: 1px solid ${({ theme }) => theme.color.silver};
   padding: 20px;
   border-radius: 10px;
   margin: 0px 0;
@@ -22,7 +22,7 @@ export const Fieldset = styled.fieldset`
 
 export const Legend = styled.legend`
   background-color: teal;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   padding: 10px;
   border-radius: 10px;
 `;
@@ -36,44 +36,44 @@ export const Button = styled.button`
   width: 100%;
   margin-right: 5px;
   border: none;
-  background-color: teal;
-  color: white;
+  background-color: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
   padding: 10px;
   border-radius: 10px;
 
   &:hover {
-    background-color: hsl(180, 100%, 30%);
+    background-color: ${({ theme }) => theme.color.persionGreen};
   }
 
   &:active {
-    background-color: hsl(180, 100%, 35%);
+    background-color: ${({ theme }) => theme.color.bondiBlue};
   }
 `;
 
 export const Field = styled.select`
-  border: 1px solid #ccc;
+  border: 1px solid ${({ theme }) => theme.color.silver};
   padding: 10px;
   width: 100%;
   border-radius: 10px;
 
   &:read-only {
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.color.gallery};
   }
   &:read-only {
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.color.gallery};
   }
 `;
 
 export const FieldInput = styled.input`
-  border: 1px solid #ccc;
+  border: 1px solid ${({ theme }) => theme.color.silver};
   padding: 10px;
   width: 100%;
   border-radius: 10px;
 
   &:read-only {
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.color.gallery};
   }
   &:read-only {
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.color.gallery};
   }
 `;

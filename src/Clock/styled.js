@@ -5,5 +5,5 @@ export const StyleClock = styled.div`
   font-family: "Courier New";
   font-size: 13px;
   margin: 5px 5px 10px;
-  color: rgb(1, 0, 51);
+  color: ${({ theme }) => theme.color.stratos};
 `;
