@@ -6,6 +6,8 @@ import {
   Button,
   Field,
   FieldInput,
+  Loading,
+  Error,
 } from "./styled";
 
 import { useState } from "react";
@@ -23,7 +25,6 @@ export const Form = () => {
   const calculateRate = (currency, amount) => {
     const rate = ratesData.rates[currency];
 
-
     setResult({
       sourceAmount: +amount,
       targetAmount: amount / rate,
@@ -40,6 +41,21 @@ export const Form = () => {
     <StyledForm onSubmit={onSubmit}>
       <Fieldset>
         <Legend>Przelicznik walut</Legend>
+
+        {ratesData.status === "loading" ? (
+          <>
+            <Loading>
+              Jeszcze chwilka, Pobieramy aktualne stawki walut na dzisiejszy dzień
+            </Loading>
+          </>
+
+        ) : ratesData.status === "error" ? (
+            <Error>
+              Coś posżło nie tak... Sprwadź połączenie z internetem! Jeśli wszystko jes podłączone... Pracujemy nad poprawą błędu! Zajrzyj do nas za chwilę ;D
+            </Error>
+        ) : (
+        
+<>
         <Clock />
         <p>
           <label>
@@ -81,6 +97,8 @@ export const Form = () => {
             Sprawdź aktualny kurs
           </a>
         </p>
+        </>
+        )}
       </Fieldset>
     </StyledForm>
   );
