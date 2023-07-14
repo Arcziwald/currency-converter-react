@@ -21,3 +21,4 @@ https://arcziwald.github.io/currency-converter-react/
 - Styled Components
 - Custom Hooks
 - Local Storage
+- API - Axios
