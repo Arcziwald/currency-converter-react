@@ -9,6 +9,7 @@ export const theme = {
     bondiBlue: "#00B3B3",
     gallery: "#eeeeee",
     teal: "#008080",
+    crimson: "#db143c",
   },
   breakpoint: {
     mobileMax: 768,
