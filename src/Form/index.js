@@ -1,5 +1,5 @@
 import {
-  StyleForm,
+  StyledForm,
   Fieldset,
   Legend,
   Label,
@@ -33,7 +33,7 @@ export const Form = () => {
   };
 
   return (
-    <StyleForm onSubmit={onSubmit}>
+    <StyledForm onSubmit={onSubmit}>
       <Fieldset>
         <Legend>Przelicznik walut</Legend>
         <Clock />
@@ -78,7 +78,7 @@ export const Form = () => {
           </a>
         </p>
       </Fieldset>
-    </StyleForm>
+    </StyledForm>
   );
 };
 
