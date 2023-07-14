@@ -12,13 +12,17 @@ import { useState } from "react";
 import { Result } from "../Result";
 import { currencies } from "./currencies";
 import { Clock } from "../Clock";
+import { useRatesData } from "./useRatesData";
 
 export const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].code);
   const [result, setResult] = useState();
+  const ratesData = useRatesData();
+
   const calculateRate = (currency, amount) => {
-    const rate = currencies.find(({ code }) => code === currency).rate;
+    const rate = ratesData.rates[currency];
+
 
     setResult({
       sourceAmount: +amount,
