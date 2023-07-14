@@ -6,7 +6,7 @@ export const StyledForm = styled.form`
   padding: 5px 5px;
   background-size: auto;
   font-family: Lato, sans-serif;
-  height: 405px;
+  height: 435px;
   resize: both;
   overflow: auto;
   border-radius: 30px;
@@ -76,4 +76,19 @@ export const FieldInput = styled.input`
   &:read-only {
     background-color: ${({ theme }) => theme.color.gallery};
   }
+`;
+export const Loading = styled.p`
+  font-size: 16px;
+  color: ${({ theme }) => theme.color.teal};
+`;
+
+export const Error = styled.p`
+  font-size: 16px;
+  color: ${({ theme }) => theme.color.crimson};
+  text-align: center;
+`;
+
+export const Footer = styled.footer`
+  font-family: Lato, sans-serif;
+  text-align: center;
 `;
