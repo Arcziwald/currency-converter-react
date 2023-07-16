@@ -20,7 +20,7 @@ import { useRatesData } from "./useRatesData";
 export const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("USD");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(null);
   const ratesData = useRatesData();
 
   const calculateRate = (currency, amount) => {
@@ -45,12 +45,10 @@ export const Form = () => {
         <Legend>Przelicznik walut</Legend>
 
         {ratesData.status === "loading" ? (
-          <>
-            <Loading>
-              Momencik 😎... <br />
-              Ładuję kursy walut z Europejskiego Banku Centralnego
-            </Loading>
-          </>
+          <Loading>
+            Momencik 😎... <br />
+            Ładuję kursy walut z Europejskiego Banku Centralnego
+          </Loading>
         ) : ratesData.status === "error" ? (
           <Error>
             Hmm 🤔... Coś poszło nie tak. Sprawdź, czy masz połączenie z
