@@ -7,7 +7,7 @@ export const useRatesData = () => {
   });
 
   useEffect(() => {
-    const currentExchangeRate = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,CHF";
+    const currentExchangeRate = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,CHF&_=" + Date.now();
 
     const axiosRates = async () => {
       try {
