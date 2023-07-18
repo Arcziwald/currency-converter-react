@@ -50,10 +50,10 @@ export const Form = () => {
           </Loading>
         ) : ratesData.state === "error" ? (
           <Error>
-            Hmm 🤔... Coś poszło nie tak. Sprawdź, czy masz połączenie z
+            Hmm 🤔... Coś poszło nie tak. <br />Sprawdź, czy masz połączenie z
             internetem.
             <br />
-            Jeśli masz ... to wygląda na to, że to nasza wina. Może spróbuj
+            Jeśli masz ... to wygląda na to, że to nasza wina. <br /> Może spróbuj
             później😜
           </Error>
         ) : (
