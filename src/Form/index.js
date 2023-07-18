@@ -44,12 +44,12 @@ export const Form = () => {
       <Fieldset>
         <Legend>Przelicznik walut</Legend>
 
-        {ratesData.status === "loading" ? (
+        {ratesData.state === "loading" ? (
           <Loading>
             Momencik 😎... <br />
             Ładuję kursy walut z Europejskiego Banku Centralnego
           </Loading>
-        ) : ratesData.status === "error" ? (
+        ) : ratesData.state === "error" ? (
           <Error>
             Hmm 🤔... Coś poszło nie tak. Sprawdź, czy masz połączenie z
             internetem.
@@ -99,7 +99,7 @@ export const Form = () => {
 
             <Footer>
               Kursy walut pobierane są z Europejskiego Banku Centralnego <br />{" "}
-              Aktualne na dzień: <b> {currencyDate}</b>
+              Aktualne na dzień: <b>{currencyDate}</b>
             </Footer>
           </>
         )}
