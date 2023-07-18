@@ -13,7 +13,6 @@ import {
 
 import { useState } from "react";
 import { Result } from "../Result";
-
 import { Clock } from "../Clock";
 import { useRatesData } from "./useRatesData";
 
