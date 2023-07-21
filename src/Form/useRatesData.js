@@ -5,10 +5,8 @@ export const useRatesData = (rateUrl) => {
   const [ratesData, setRatesData] = useState({
     state: "loading",
   });
-    
-  useEffect(() => {
-  
 
+  useEffect(() => {
     const axiosRates = async () => {
       try {
         const response = await axios.get(rateUrl);
@@ -27,8 +25,7 @@ export const useRatesData = (rateUrl) => {
     };
 
     setTimeout(axiosRates, 1500);
-  },
-  );
+  });
 
   return ratesData;
 };

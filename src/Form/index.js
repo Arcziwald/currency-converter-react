@@ -16,17 +16,19 @@ import { Result } from "../Result";
 import { Clock } from "../Clock";
 import { useRatesData } from "./useRatesData";
 
-const currentExchangeRateUrl = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,CHF&_=" + Date.now();
+const currentExchangeRateUrl =
+  "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,CHF&_=" +
+  Date.now();
 
 export const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [result, setResult] = useState(null);
   const ratesData = useRatesData(currentExchangeRateUrl);
-  
+
   const calculateRate = (currency, amount) => {
     const rate = ratesData.rates[currency];
-    
+
     setResult({
       sourceAmount: +amount,
       targetAmount: amount / rate,
@@ -52,11 +54,11 @@ export const Form = () => {
           </Loading>
         ) : ratesData.state === "error" ? (
           <Error>
-            Hmm 🤔... Coś poszło nie tak. <br />Sprawdź, czy masz połączenie z
-            internetem.
+            Hmm 🤔... Coś poszło nie tak. <br />
+            Sprawdź, czy masz połączenie z internetem.
             <br />
-            Jeśli masz ... to wygląda na to, że to nasza wina. <br /> Może spróbuj
-            później😜
+            Jeśli masz ... to wygląda na to, że to nasza wina. <br /> Może
+            spróbuj później😜
           </Error>
         ) : (
           <>
