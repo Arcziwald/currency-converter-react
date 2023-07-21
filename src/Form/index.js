@@ -16,15 +16,17 @@ import { Result } from "../Result";
 import { Clock } from "../Clock";
 import { useRatesData } from "./useRatesData";
 
+const currentExchangeRateUrl = "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,CHF&_=" + Date.now();
+
 export const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [result, setResult] = useState(null);
-  const ratesData = useRatesData();
-
+  const ratesData = useRatesData(currentExchangeRateUrl);
+  
   const calculateRate = (currency, amount) => {
     const rate = ratesData.rates[currency];
-
+    
     setResult({
       sourceAmount: +amount,
       targetAmount: amount / rate,
